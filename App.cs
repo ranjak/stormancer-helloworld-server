@@ -8,10 +8,10 @@ using Stormancer.Core;
 
 namespace tutorial_helloworld
 {
-    public class App
+  public class App
+  {
+    public void Run(IAppBuilder builder)
     {
-      public void Run(IAppBuilder builder)
-      {
       builder.SceneTemplate("hello", scene =>
       {
         scene.Connected.Add(peer =>
@@ -20,6 +20,6 @@ namespace tutorial_helloworld
           return Task.FromResult(true);
         });
       });
-      }
     }
+  }
 }
